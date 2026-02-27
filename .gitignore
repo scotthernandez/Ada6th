@@ -1,0 +1,13 @@
+# System Files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE Files
+.vscode/
+.idea/
+
+# Personal Scratch Files
+Trip_Plan.md
+pages_config.json
+/tmp/
