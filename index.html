@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada's 6th Birthday: San Diego Adventure</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="stars-bg"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="title">Ada's <span class="highlight">6th</span> Birthday</h1>
+            <h2 class="subtitle">San Diego Adventure Guide</h2>
+            <p class="dates"><i class="far fa-calendar-alt"></i> March 6 - 8, 2026</p>
+        </div>
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                </g>
+            </svg>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Dashboard Overview -->
+        <div class="section-bg bg-hotel">
+            <section class="dashboard card fade-in">
+                <img src="images/hotel.png" alt="The Welk" class="card-image">
+                <div class="card-header d-flex-between">
+                    <h3><i class="fas fa-hotel"></i> Basecamp: The Welk</h3>
+                    <a href="hotel.html" class="btn-sm">View Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card-body hotel-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt text-gradient"></i>
+                        <div>
+                            <strong>Address:</strong>
+                            <p>8860 Lawrence Welk Dr, Escondido, CA</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-ticket-alt text-gradient"></i>
+                        <div>
+                            <strong>Reservation:</strong>
+                            <p>Agoda #968117074 (One-Bedroom Suite)</p>
+                        </div>
+                    </div>
+                    <div class="alert warning">
+                        <i class="fas fa-exclamation-triangle"></i> Pool renovations ongoing. ~45 min drive to La Jolla
+                        coast.
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="itinerary">
+            <!-- Day 1 -->
+            <div class="section-bg bg-dining">
+                <section class="day-card slide-up" data-day="1">
+                    <img src="images/dining.png" alt="Dining" class="card-image">
+                    <div class="day-header">
+                        <h2><span class="day-badge">Day 1</span> Arrival & Local Vibes</h2>
+                        <div class="header-actions">
+                            <a href="dining.html" class="btn-text">Dining Guide <i class="fas fa-utensils"></i></a>
+                            <i class="fas fa-chevron-down chevron" onclick="toggleDay(1)"></i>
+                        </div>
+                    </div>
+                    <div class="day-content" id="day-1-content">
+                        <ul class="task-list">
+                            <li class="task-item" onclick="toggleTask(this)">
+                                <div class="checkbox"></div>
+                                <div class="task-details">
+                                    <h4>Drive Down</h4>
+                                    <p>Leave early to beat the traffic!</p>
+                                </div>
+                            </li>
+                            <li class="task-item" onclick="toggleTask(this)">
+                                <div class="checkbox"></div>
+                                <div class="task-details">
+                                    <h4>Check-in at The Welk</h4>
+                                    <p>Settle into the suite and drop off bags.</p>
+                                </div>
+                            </li>
+                            <li class="task-item restaurant-task" onclick="toggleTask(this)">
+                                <div class="checkbox"></div>
+                                <div class="task-details">
+                                    <h4>Sushi Dinner</h4>
+                                    <p>Top local choices around Escondido/San Marcos:</p>
+                                    <div class="options">
+                                        <span class="tag"><i class="fas fa-star"></i> Akita Japanese (Hidden Gem)</span>
+                                        <span class="tag"><i class="fas fa-star"></i> It's Tabu (Trendy, Bento
+                                            boxes)</span>
+                                        <span class="tag"><i class="fas fa-star"></i> Umami (Modern, Bao buns)</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="section-bg bg-safari">
+                <section class="day-card slide-up" data-day="2" style="animation-delay: 0.1s;">
+                    <img src="images/safari.png" alt="Safari" class="card-image">
+                    <div class="day-header">
+                        <h2><span class="day-badge">Day 2</span> Safari Adventure</h2>
+                        <div class="header-actions">
+                            <a href="safari.html" class="btn-text">Full Safari Guide <i class="fas fa-leaf"></i></a>
+                            <i class="fas fa-chevron-down chevron" onclick="toggleDay(2)"></i>
+                        </div>
+                    </div>
+                    <div class="day-content" id="day-2-content">
+                        <div class="alert info mb-3">
+                            <i class="fas fa-info-circle"></i> Safari Park Address: 15500 San Pasqual Valley Rd ($20
+                            Parking)
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item" onclick="toggleTask(this)">
+                                <div class="time">9:00 AM</div>
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-bus"></i> Africa Tram</h4>
+                                    <p>Beat the lines for the 25-minute open-air safari ride.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="toggleTask(this)">
+                                <div class="time">10:30 AM</div>
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-paw"></i> Walkabout Australia</h4>
+                                    <p>See the free-roaming kangaroos up close.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="toggleTask(this)">
+                                <div class="time">11:30 AM</div>
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-dove"></i> Lorikeet Landing</h4>
+                                    <p>Buy some nectar and let Ada feed the colorful birds!</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="toggleTask(this)">
+                                <div class="time">12:15 PM</div>
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-hamburger"></i> Lunch & Play Area</h4>
+                                    <p>Eat near the Village Playground or Elephant Play Yard.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="toggleTask(this)">
+                                <div class="time">1:30 PM</div>
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-cat"></i> Tiger Trail</h4>
+                                    <p>Check out the cool log-walk/ropes course for kids.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="toggleTask(this)">
+                                <div class="time">2:30 PM</div>
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-horse"></i> Conservation Carousel</h4>
+                                    <p>Take a final spin before it gets too hot.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="section-bg bg-coast">
+                <section class="day-card slide-up" data-day="3" style="animation-delay: 0.2s;">
+                    <img src="images/whale.png" alt="Coast" class="card-image">
+                    <div class="day-header">
+                        <h2><span class="day-badge">Day 3</span> Coastal Magic</h2>
+                        <div class="header-actions">
+                            <a href="coast.html" class="btn-text">Coastal Guide <i class="fas fa-water"></i></a>
+                            <i class="fas fa-chevron-down chevron" onclick="toggleDay(3)"></i>
+                        </div>
+                    </div>
+                    <div class="day-content" id="day-3-content">
+                        <ul class="task-list">
+                            <li class="task-item" onclick="toggleTask(this)">
+                                <div class="checkbox"></div>
+                                <div class="task-details">
+                                    <h4><i class="fas fa-ship text-gradient"></i> Whale Watching</h4>
+                                    <p>Head to Point Loma/San Diego Bay for the morning tour.</p>
+                                </div>
+                            </li>
+                            <li class="task-item" onclick="toggleTask(this)">
+                                <div class="checkbox"></div>
+                                <div class="task-details">
+                                    <h4><i class="fas fa-water text-gradient"></i> La Jolla Shores Tide Pools</h4>
+                                    <p>Go at low tide! Best spot is Dike Rock, just north of Scripps Pier.</p>
+                                    <div class="options mt-2">
+                                        <span class="tag bg-light"><i class="fas fa-parking"></i> Park at La Jolla
+                                            Shores beach lot or El Paseo Grande.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="task-item" onclick="toggleTask(this)">
+                                <div class="checkbox"></div>
+                                <div class="task-details">
+                                    <h4><i class="fas fa-camera text-gradient"></i> Bird Rock Waterfront</h4>
+                                    <p>Walk the paved coastal paths, check out Calumet Park for bluff views.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ for Ada by Antigravity</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
